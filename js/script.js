@@ -1,17 +1,17 @@
 //Constructor
-function Order(number){
+function Order(number, size, crust, topping){
     this.number=number;
-    this.size=[];
-    this.crust=[];
-    this.topping=[];
+    this.size=size;
+    this.crust=crust;
+    this.topping=topping;
 }
 //size object
 
-var size={small:250, medium:350, large:450}
+var sizes={small:250, medium:350, large:450}
 
 //crust object
 
-var crust={butter:100, garlicButter:150, canjumButter:200, parmesan:100, sesameSeed:150, everything:250}
+var crusts={butter:100, garlicButter:150, canjumButter:200, parmesan:100, sesameSeed:150, everything:250}
 
 //topping object
 var topping={chicken:100, bacon:150, bbq:200, tomatoes:250,onions:50,olives:300, meatballs:100, pineapple:150, mushroom:300, cheese:100}
@@ -40,12 +40,14 @@ function reducePrices(){
     var reducer=(acc, currentValue)=> acc+currentValue;
    return prices.reduce(reducer);
 }
-var selectedTopping=reducePrices();
+
+var selectedTopping=reducePrices();//should be halved maybe to get reasonable prices
 
 var inputtedNumber=$("input#num").val();
 var selectedSize=$("select#size option:selected").val();
 var selectedCrust=$("select#crust option:selected").val();
-var newOrder= new Order(inputtedNumber, selectedSize, selectedCrust, selectedTopping);
+var newOrder= new Order(inputtedNumber, sizes[selectedSize], crusts[selectedCrust], selectedTopping);
+
 //method
 Order.prototype.fullorder=function(){
     var fullorder=(size[selectedSize]+crust[selectedCrust]+selectedTopping)*this.number;
