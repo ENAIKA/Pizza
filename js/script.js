@@ -28,14 +28,19 @@ function getMultiple() {
 //declare variables
 var getValues=getMultiple();
 //an array of prices from get value
-function getPrices(){
-    var prices;
-    var test = getValues.map(function(item, index) {
-       prices=topping[getValues[index]];
-       return prices;
-      })
-}
+function getPrices(price) {
+   return price.map(function (item, index) {
+        return topping[getValues[index]];
 
+    })
+}
+var prices=getPrices(getValues)
+//reduce the array
+function reducePrices(){
+    var reducer=(acc, currentValue)=> acc+currentValue;
+   return prices.reduce(reducer);
+}
+var selectedTopping=reducePrices();
 
 var inputtedNumber=$("input#num").val();
 var selectedSize=$("select#size option:selected").val();
@@ -43,6 +48,6 @@ var selectedCrust=$("select#crust option:selected").val();
 var newOrder= new Order(inputtedNumber, selectedSize, selectedCrust, selectedTopping);
 //method
 Order.prototype.fullorder=function(){
-    var fullorder=(size[selectedSize]+crust[selectedCrust]+topping[selectedTopping])*this.number;
+    var fullorder=(size[selectedSize]+crust[selectedCrust]+selectedTopping)*this.number;
     return fullorder;
 }
