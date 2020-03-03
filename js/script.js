@@ -43,13 +43,13 @@ function reducePrices(){
 
 var selectedTopping=reducePrices();//should be halved maybe to get reasonable prices
 
-var inputtedNumber=$("input#num").val();
+var inputtedNumber=parseInt($("input#num").val());
 var selectedSize=$("select#size option:selected").val();
 var selectedCrust=$("select#crust option:selected").val();
 var newOrder= new Order(inputtedNumber, sizes[selectedSize], crusts[selectedCrust], selectedTopping);
 
 //method
 Order.prototype.fullorder=function(){
-    var fullorder=(size[selectedSize]+crust[selectedCrust]+selectedTopping)*this.number;
+    var fullorder=(this.size +this.crust+this.topping)*this.number; 
     return fullorder;
 }
