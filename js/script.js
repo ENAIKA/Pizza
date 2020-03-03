@@ -23,10 +23,20 @@ function getMultiple() {
     for (var i = 0; i < selectElement.length; i++) {
         if (selectElement.options[i].selected) selectedElements.push(selectElement.options[i].value);
     }
-   return selected1;
+   return selectedElements;
 }
 //declare variables
 var getValues=getMultiple();
+//an array of prices from get value
+function getPrices(){
+    var prices;
+    var test = getValues.map(function(item, index) {
+       prices=topping[getValues[index]];
+       return prices;
+      })
+}
+
+
 var inputtedNumber=$("input#num").val();
 var selectedSize=$("select#size option:selected").val();
 var selectedCrust=$("select#crust option:selected").val();
