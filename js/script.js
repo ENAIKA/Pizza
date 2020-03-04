@@ -57,8 +57,29 @@ $(document).ready(function () {
         var selectedCrust = $("select#crust option:selected").val();
         var newOrder = new Order(inputtedNumber, sizes[selectedSize], crusts[selectedCrust], selectedTopping);
 
-        $("ul#getMyOrder").append("<li> <span class='getMyOrder'>" + inputtedNumber +" " +selectedSize +"-"+"sized" +" "+ selectedCrust +" "+"crust" +" "+ "with"+" "+priced+ " "+"topping pizza"+ " " +newOrder.fullorder()+"</span></li>");
+        // $("ul#getMyOrder").append("<li> <span class='getMyOrder'>" + inputtedNumber +" " +selectedSize +"-"+"sized" +" "+ selectedCrust +" "+"crust" +" "+ "with"+" "+priced + " "+"topping pizza"+ " " +newOrder.fullorder()+"</span></li>");
+        var tabledata = "<tr><td>"+ inputtedNumber +"</td><td>" +selectedSize+"</td><td>" + selectedCrust + "</td><td>" + priced + "</td><td>" + newOrder.fullorder() + "</td></tr>";
+        $('tbody').append(tabledata);
+        var tabletotal = "<tr><td colspan = '4'>" + + "</td><td>" +  + "</td><tr>"
+        $("tfoot").append()
+        
     });
+    $(".medium").hover(function(){
+        $("#medium").fadeToggle();},
+        function(){
+        $("#medium").fadeToggle(1000);
+      });
+      $(".large").hover(function(){
+        $("#large").fadeToggle();},
+        function(){
+        $("#large").fadeToggle(1000);
+      });
+      $(".small").hover(function(){
+        $("#small").fadeToggle();},
+        function(){
+        $("#small").fadeToggle(1000);
+      });
+      
 });
 
 //method
