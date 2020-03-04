@@ -60,8 +60,7 @@ $(document).ready(function () {
         // $("ul#getMyOrder").append("<li> <span class='getMyOrder'>" + inputtedNumber +" " +selectedSize +"-"+"sized" +" "+ selectedCrust +" "+"crust" +" "+ "with"+" "+priced + " "+"topping pizza"+ " " +newOrder.fullorder()+"</span></li>");
         var tabledata = "<tr><td>"+ inputtedNumber +"</td><td>" +selectedSize+"</td><td>" + selectedCrust + "</td><td>" + priced + "</td><td>" + newOrder.fullorder() + "</td></tr>";
         $('tbody').append(tabledata);
-        var tabletotal = "<tr><td colspan = '4'>" + + "</td><td>" +  + "</td><tr>"
-        $("tfoot").append()
+        
         
     });
     $(".medium").hover(function(){
@@ -81,7 +80,20 @@ $(document).ready(function () {
       });
       
 });
-
+$(document).ready(function() {
+    // 
+    $("#button").click( function () {
+       
+            var theTotal = 0;
+            $("td:nth-child(5)").each(function () {
+                var vals = $(this).text().replace(" ", "").replace(",-", "");
+                theTotal += parseInt(vals);
+            });
+            $("#totalSalary").html('<td colspan="4">' + theTotal + '/= </td>');
+        });
+    
+  });
+  
 //method
 //method to get whole billing
 // Order.prototype.totalOrder=function(){
