@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Simonetta|Trade+Winds&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Pizza</title>
+    <title>Nakish Pizza</title>
 </head>
 
 <body>
@@ -52,40 +52,33 @@
                         <h3 class="title  text-center" style="color:white;">MENU</h3>
                         <ul style="list-style: none;">
                             <li><a href="#offer" style="color: white; text-decoration: none;">Offer</a></li>
-                            <li><a href="#chicken" style="color: white; text-decoration: none;">Chicken</a></li>
-                            <li><a href="#toppings" style="color: white; text-decoration: none;">Topping</a></li>
                             <li><a href="#crust" style="color: white; text-decoration: none;">Crust</a></li>
-                            <li><a href="#size" style="color: white; text-decoration: none;">Pizza Sizes</a></li>
+                            <li><a href="#toppings" style="color: white; text-decoration: none;">Topping</a></li>
+                            <li><a href="#sizes" style="color: white; text-decoration: none;">Pizza Sizes</a></li>
 
                         </ul>
                     </div>
                     <div class="col-sm-8">
-                        <div class="menu d-flex flex-row flex-wrap-nowrap" id="orderPizza"
-                            style="height: 20vh;padding: 20px;">
-                            <div class="orderPick" style="width: 90px;">
-                                <form id="form1">
-                                    <input id="num"type="number" style="height:50px;" min="1" placeholder="Number"
-                                        required></input>
-                                    <button type="submit" id="btnOrder" class="btn">Add Order</button>
-                                </form>
-                                <div class="orderShow">
-                                    <h2>CURRENT ORDER:</h2>
-                                    <ul id="orderShow">
-
-                                    </ul>
+                        <div class="menu d-flex flex-row flex-wrap-nowrap" id="orderPizza" style="height: 30vh;">
+                            <form id="form1">
+                                <div class="orderPick" style="width: 100%;">
+                                    <input id="num" type="number" style="height:50px; width: 90%;" min="1"
+                                        placeholder="Number" required /></div>
+                                <div class="orderPick text-center" style="padding-top: 20%;">
+                                    <button type="button" id="btnOrder" class="btn btn-primary">Add Order</button>
                                 </div>
-                            </div>
+                            </form>
                             <div class="size">
-                                <select id="size" style="height:50px;" form="form1">
+                                <select id="size" style="height:50px;" form="form1" required>
                                     <option value="" disabled selected>Select Size</option>
                                     <option value="small">Small</option>
                                     <option value="medium">Medium</option>
-                                    <option value="big">Large</option>
+                                    <option value="large">Large</option>
 
                                 </select>
                             </div>
                             <div class="crust">
-                                <select id="crust" style="height:50px;" form="form1">
+                                <select id="crust" style="height:50px;" form="form1" required>
                                     <option value="" disabled selected>Select Crust</option>
                                     <option value="butter">butter</option>
                                     <option value="garlicButter">garlic butter</option>
@@ -96,7 +89,7 @@
                                 </select>
                             </div>
                             <div class="topping">
-                                <select id="topping" style="height:50px;" form="form1">
+                                <select id="topping" multiple="multiple" style="height:50px;" form="form1" required>
                                     <option value="" disabled selected>Select your topping</option>
                                     <option value="chicken">Chicken</option>
                                     <option value="bacon">Bacon</option>
@@ -111,116 +104,183 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="pizza" id="pizza">
+                        <div class="pizza" id="pizza" style="padding-top: 12px;">
                             <div class="pizzas" id="menu">
+                                <h6 class="well bg-warning text-center">TODAY'S OFFER!!!</h6>
+                                <div>
+                                    <img src="images/topping/pineapple topping.webp" alt="pineapple topping pizza"
+                                        style="width:200px;
+                                    height: 200px;padding-top: 12px;">
 
-                                <div class="well bg-secondary">
-                                    <h6 class="text-center">TODAY'S OFFER!!!</h6>
+
+                                    <img src="images/topping/prawn topping.webp" alt="prawn topping pizza" style="width:200px;
+                                    height: 200px;padding-left: 12px;">
+                                </div>
+                                <div style="padding-top: 12px;">
+                                    <img src="images/topping/truffle topping.webp" alt="truffle topped pizza" style="width:200px;
+                                    height: 200px;">
+
+                                    <img src="images/topping/ricotta topping.webp" alt="ricotta topping pizza" style="width:200px;
+                                    height: 200px;padding-left: 12px;">
                                 </div>
 
                             </div>
-                            <div class="pizzas" id="displayPizza">
-                                <div class="Chiken">
-                                    <div>
-                                        <img>
+                            <div class="pizzas" id="displayPizza" style="padding-top: 12px;">
+                                <h6 class="well bg-warning text-center">CRUSTS AVAILABLE</h6>
+
+                                <div class="crust" id="crust">
+                                    <div style="padding-top: 12px;">
+                                        <img src="./images/crust/EggplantPermesan.jpeg"
+                                            alt="eggplant permesan pizza image" style="width:200px;
+                                        height: 200px;">
+
+                                        <img src="./images/crust/flavoredCrust.jpeg" alt="falvoured crust pizza image"
+                                            style="width:200px;
+                                        height: 200px;padding-left: 12px;">
                                     </div>
-                                    <div>
-                                        <img>
+                                    <div style="padding-top: 12px;">
+                                        <img src="./images/crust/GarlicButter.jpeg" alt="garlic butter pizza image"
+                                            style="width:200px;
+                                        height: 200px;">
+
+                                        <img src="./images/crust/jalapenos.webp" alt="jalapenos image" style="width:200px;
+                                        height: 200px;padding-left: 12px;">
                                     </div>
-                                    <div>
-                                        <img>
-                                    </div>
-                                    <div>
-                                        <img>
-                                    </div>
-                                    <div>
-                                        <img>
+                                    <div class="text-center">
+                                        <img src="./images/crust/pepperoni.jpeg" alt="pepperoni pizza image" style="width:200px;
+                                        height: 200px;padding-top: 12px;">
                                     </div>
                                 </div>
                                 <div class="topping" id="toppings">
-                                    <div>
-                                        <img src="./images/topping/bacon tpping.webp" alt="bacon topping image" style="width:200px;
+                                    <h6 class="well bg-warning text-center">TOPPINGS</h6>
+                                    <div style="padding-top: 12px;">
+                                        <div>
+                                            <img src="./images/topping/bacon tpping.webp"
+                                                alt="bacon topping pizza image" style="width:200px;
                                         height: 200px;">
-                                    </div>
-                                    <div>
-                                        <img src="./images/topping/bbq sauce.webp" alt="BBQ topping image" style="width:200px;
-                                        height: 200px;">
-                                    </div>
-                                    <div>
-                                        <img src="./images/topping/feta topping.webp" alt="feta toppimg image" style="width:200px;
-                                        height: 200px;">
-                                    </div>
+                                            <img src="./images/topping/bbq sauce.webp" alt="BBQ topping image" style="width:200px;
+                                        height: 200px;padding-left: 12px;">
+                                        </div>
 
-                                    <div>
-                                        <img src="./images/topping/ham topping.webp" alt="ham topping image" style="width:200px;
+                                        <div style="padding-top: 12px;">
+                                            <img src="./images/topping/feta topping.webp" alt="feta toppimg image"
+                                                style="width:200px;
                                         height: 200px;">
-                                    </div>
-                                    <div>
-                                        <img src="./images/topping/italian sausage.webp" alt="italian sausage image"
-                                            style="width:200px;
-                                        height: 200px;">
-                                    </div>
-                                    <div>
-                                        <img src="./images/topping/meatball topping.webp" alt="meatball toppinng image"
-                                            style="width:200px;
-                                        height: 200px;">
-                                    </div>
+                                            <img src="./images/topping/ham topping.webp" alt="ham topping image" style="width:200px;
+                                        height: 200px;padding-left: 12px;">
+                                        </div>
 
-                                    <div>
-                                        <img src="./images/topping/mushroom.webp" alt="mushroom topping" style="width:200px;
+
+                                        <div style="padding-top: 12px;">
+                                            <img src="./images/topping/italian sausage.webp" alt="italian sausage image"
+                                                style="width:200px;
                                         height: 200px;">
+                                            <img src="./images/topping/meatball topping.webp"
+                                                alt="meatball toppinng image"
+                                                style="width:200px;height: 200px;padding-left: 12px;">
+
+                                        </div>
+
+                                        <div class="text-center" style="padding: 12px;">
+                                            <img src="./images/topping/mushroom.webp" alt="mushroom topping" style="width:200px;
+                                        height: 200px;">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="">
-                                    <div>
-                                        <img>
-                                    </div>
-                                    <div>
-                                        <img>
+                                    <div class="sizes" id="sizes">
+                                        <h6 class="well bg-warning text-center">AVAILABLE SIZES</h6>
+                                        <div style="padding-top: 12px;">
+                                            <div class="d-flex flex-row">
+                                                <div>
+                                                    <img class="large" src="./images/pizzaSize/largePizza.jpeg"
+                                                        alt="large pizza image" style="width:200px;height: 200px;">
+                                                    <p class="description" id="large">Large Pizza<br>Price: Kshs. 450
+                                                    </p>
+                                                </div>
+                                                <div>
+                                                    <img class="medium" src="./images/pizzaSize/mediumPizza.jpeg"
+                                                        alt="medium pizza image"
+                                                        style="padding-left: 12px;width:200px;height: 200px;">
+                                                    <p class="description" id="medium" style="padding-left:2px;">Medium
+                                                        Pizza<br>Price: Kshs.350</p>
+                                                </div>
+                                            </div>
+                                            <div style="padding-top: 12px;">
+                                                <img class="small" src="./images/pizzaSize/smallPizza.jpeg"
+                                                    alt="small pizza image" style="width:200px;height: 200px;">
+                                                <p class="description" id="small">Small Pizza<br>Price: Kshs.250</p>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
 
                             </div>
                         </div>
-
                     </div>
+
                 </div>
             </div>
-
-
             <div class="col-md-4">
-                <div class="card fix">
+                <!-- <div class="card fix">
                     <div class="card-header">
                         <p>ORDER</p>
                     </div>
                     <div class="card-body">
-                        <ul>
+                        <ul id="getMyOrder" class="getMyOrder" style="list-style: none;">
 
                         </ul>
                     </div>
                     <div>
-                        <p class="text-info"><em>The order must be atlest KShs. 500</em></p>
+                        <p class="text-info"><em>The order must be atlest KShs. 350</em></p>
                     </div>
-                    <div class="err"></div>
+                    <div class="err"> </div>
                     <div class="card-footer">
-                        <p>Total <span></span></p>
-                    </div>
-                </div>
+                        <button id="getMyPrice">Total</button>
+                    </div> -->
+                <table style="background:white; width:100%" class="dataTable" id="example">
+                    <thead>
+                        <tr>
+                            <th>Qty</th>
+                            <th>Size</th>
+                            <th>Crust</th>
+                            <th>Topping</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td><button id="button" class="btn-warning">Place Order</button></td></td>
+                            <td colspan='5'> <span style="float:right;" id='totalSalary'>Total</td>
+                        </tr>
+                        <tr>
+                            <td><button id="button1" onclick="checkout()">Checkout</button></td>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
+
+
+
         </div>
+
         <footer>
             <div class="footer bg-danger">
                 <div class="text-center">
-                    <p>bcdibscisix</p>
+                    <p>Nakish Pizza</p>
+
                 </div>
 
             </div>
         </footer>
 
-        <script src="./js/jquery-3.4.1.js"></script>
-        <script src="./js/script.js"></script>
+
     </div>
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"ccce042a45e1cb02fa78a9f3b","lid":"26f7c12bfd","uniqueMethods":true}) })</script>           
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
