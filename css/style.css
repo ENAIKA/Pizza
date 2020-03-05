@@ -1,0 +1,28 @@
+.nav1{
+    width: 100%; 
+}
+.text{
+    color:white;
+}
+.fix {
+    position: fixed;
+}
+.well{
+    height:5vh;
+}
+.description, #mc_embed_signup{
+    display: none;
+}
+#small,#medium,#large{
+    position: absolute;
+    box-sizing: border-box;
+    border:1px solid white;
+    align-content: center;
+    width:25%;
+    padding:1rem; 
+    margin-top:-150px;
+    margin-bottom:-150px;
+    margin-left:3px;
+    color:black;
+    background-color: white;
+}

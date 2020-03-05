@@ -31,7 +31,7 @@
                             style="font-family: 'Trade Winds'; width: 90px;">
                             <a class="nav-link" href="#menu">Order</a></li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html">SignUp/Login</a></li>
+                            <a class="nav-link" href="#button2">SignUp/Login</a></li>
                     </ul>
                     <form class="form-inline" action="">
                         <div class="input-group">
@@ -58,6 +58,7 @@
                             <li><a href="#sizes" style="color: white; text-decoration: none;">Pizza Sizes</a></li>
 
                         </ul>
+                        <button id="button2">SUBSCRIBE</button>
                         </div>
                         <div id="mc_embed_signup">
                             <form action="https://github.us4.list-manage.com/subscribe/post?u=ccce042a45e1cb02fa78a9f3b&amp;id=26f7c12bfd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -278,14 +279,19 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td><button id="button" class="btn-warning">Place Order</button></td></td>
+                            
                             <td colspan='5'> <span style="float:right;" id='totalSalary'>Total</td>
-                        </tr>
-                        <tr>
-                            <td><button id="button1" onclick="checkout()">Checkout</button></td>
-                        </tr>
+                            </tr>
                     </tfoot>
                 </table>
+                <div class="text-center"style="background:white;">
+                   
+                    <label>Delivery?</label>
+                    <input type="radio" name="delivery" id="rad1" value="300">Yes
+                    <input type="radio" name="delivery" id="rad2" value="0">No<br>
+                    <button id="button" class="btn-warning">Place Order</button>
+                    <button id="button1" onclick="checkout()">Checkout</button>
+                </div>
             </div>
 
 
@@ -294,6 +300,19 @@
 
         <footer>
             <div class="footer bg-danger">
+                <div class="d-flex flex-row justify-content-center text-center" id="contacts"style="padding: 20px;">
+                    <div class="social">
+                        <a href="https://twitter.com/nakishcarpiscoh" target="_blank"><img
+                                src="./images/social icon/twitter.png" alt="twitter icon"></a>
+                    </div>
+                    <div class="social" style="padding-left: 20px;">
+                        <a href="https://www.facebook.com/nakish.nakish.75" target="_blank"> <img
+                                src="./images/social icon/facebook.png" alt="facebook icon"></a>
+                    </div>
+                    <div class="social" style="padding-left: 20px;">
+                        <p>call <span style="color:white;"><em>0702389635</em></span> for inquiries</p>
+                    </div>
+                </div>
                 <div class="text-center">
                     <p>Nakish Pizza</p>
                 </div>

@@ -91,12 +91,15 @@ $(document).ready(function() {
             });
             $("#totalSalary").html('<td colspan="4">' + theTotal + '/= </td>');
         });
+    $("#button2").click(function(){
+       $("#mc_embed_signup").show();
+    });
+    $("input#rad1").click( function () {
+        var delivery=prompt("Location");
+        alert("deivery costs Ksh. 300");
+
+    });
+    
     
   });
   
-//method
-//method to get whole billing
-// Order.prototype.totalOrder=function(){
-//     var array1=[];
-//     for (item in )
-// }
